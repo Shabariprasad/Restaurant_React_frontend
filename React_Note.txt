@@ -1,0 +1,182 @@
+React:
+
+ > it is JS library for building user interface
+ > view layer for web app
+ > developed at facebook in 2013
+ > ideal for bulding single page application
+
+   features:
+     > easy to learn
+     > simple
+     > native approach 
+     > data binding
+     > perfomence
+     > testability
+   
+   popular site use React:
+     > facebook,insta,watsapp,yahoo mail,drop box 
+
+   React Installation:
+     Better way -
+      1> npx create-react-app myapp
+      2> cd myapp
+      3> npm start
+
+    > this npx stands for - Node Package Exicute
+    > check the current version of React Js 
+       npm view react version     
+
+  after installation :
+  1> in folder public delete all files neither index.html
+  2> delete filesin src folder app.text,logo.svg,web_vital,setup-text.js
+  3> remove line number 1 in app.js
+  4> remove the contents headerTag to headerTag in app.js
+  5> remove 5th and last line in index.js(report_webvitals)
+  6> remove all contents in app.css and index.css(we set our own design)
+  7> change the app.js to app.jsx
+
+
+  Basics:
+      Component :
+            * React app starts with a single root Component.
+            * Root Component is build with one or two Component.
+            * Each Component can be nested with other component to any leavel.
+
+  common task in front-end development :
+           -> app state - data definition,organization and storage
+           -> user actions - event handelers respond to user action 
+           -> templates - design render Html templete
+           -> routing - resolve URLs
+           -> data fetching - intract with servers through APIs and AJAX 
+    
+JSX :
+  * jsx stands for javaScript Xml.
+  * jsx provides you to write html/xml the processor will transform these expression into actual j.s code 
+    eg- <div>Hello world</div>
+       Corresponding o.p
+         ---------------
+       React.createElement(" ");
+        Function :
+          * Every JSX is converdet to the React.Element function call that the browser understands.
+          * type - can be an HTMl tag like h1,div or it can be a REact components
+          * props - are the attributes you want the element to have
+          * children - contain the other 
+          * React.createElement(type)   
+
+        use of JSX :
+          *    
+        
+
+
+  Virtual DOM 
+  ------------
+   -> it is like lightWeight copy of the actual DOM(a virtual representation of the DOM)
+   -> it does not have the power to directly change the layout of the document
+   -> vertual DOM gets updated first instead of real DOM.
+   -> when anything new is added to the application, a vertual DOM is created and it is represented as a tree.
+   -> whenever there is a change in the state of any element.a new virtual DOM tree is created.
+    
+    * the process of comparing the current virtual DOM tree with the previous one is known as 'Diffing'
+    * the entire prosses of transforming changes to the real dom is called 'Reconcilation'      
+
+  Anatomy of a React component :
+
+   component rendering :
+      > when a component function executes we sayit 'renders'
+      > assume component may re-render at any time,our job is to ensure taht every time the compont re-render,the correct output is processed
+
+  componts in react :
+
+    * in react everithing is a component
+    * 2 types 1,function-based(stateless) 2,class-based(statefull)   
+  
+  function-based component
+  -----------------------
+    * stateless component
+    * we use hooks to change the component to statfull.
+
+    Hooks :
+    > Hooks were introduce in react 16.8.
+    > it is use Reacts features-like managing your components state and or performing an after effect when certine changes occurs in state without writing a class.
+
+     state Hook :
+      * the React useState Hooks allows us to track state in the function component.
+      * state represent the value of a dynamic properties.
+      * syntax : const [val,setVal] = useState(100);
+
+        ->adding a state
+          1. import {useState} from 'react';
+          2. index = 0  , const [index,setIndex] = useState(0)
+            then : updating the value of the state :
+             function handleCLick(){
+              setIndex += 1 ;
+             }
+
+     Props 
+                Props (short for properties) are a Component's configuration.
+                A Component cannot change its props, but it is responsible for putting together the props of its child Components.
+                Props do not have to just be data -- callback functions may be passed in as props.
+
+  React bootstrap installation :
+  ------------------------------
+
+  1, site : https://react-bootstrap.github.io/
+  2, installation : npm install react-bootstrap bootstrap
+  3, index.html : (Paste it into index.html)   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
+
+  React meterial UI
+ -------------------
+
+
+
+        React MDB bootstrap
+       ---------------------- 
+    site : https://mdbootstrap.com/   
+    installation : npm i mdb-react-ui-kit
+    import : import 'mdb-react-ui-kit/dist/css/mdb.min.css'; [index.js]
+
+
+        fontAwsome
+       ------------
+    1.installation : npm i @fortawesome/fontawesome-free
+    import : import "@fortawesome/fontawesome-free/css/all.min.css"; [index.js]    
+
+      Google fonts
+     ------------------- 
+   1.google fonts
+   2.past to index.css import "@fortawesome/fontawesome-free/css/all.min.css";
+
+
+     BootsWatch (for the theme)
+    ------------
+   1.site : https://bootswatch.com/  
+   2.download the bootstrap.min.css file and copy paste into src
+   3.import './bootstrap.min.css'; into the index.js  
+    
+
+    component creation :
+           components :
+                  > Header.jsx 
+                  > Footer.jsx
+                  > AllRest.
+                  > jsxViewRest.jsx
+                  > RestCard.jsx
+
+
+    *Backend creation using json server(Details in your ppt)
+
+    *API fetching using axios (Details in your ppt)
+
+    * Routing
+    ----------- 
+
+        localhost:3000 -> fetch all the restaurants Details
+        localhost:3000/view/id - view particular restaurant details
+
+        The react-router-dom package contains bindings for using React Router in web applications.
+
+        Installation - npm i react-router-dom
+
+        ->BrowserRouter - Use all app routes are Routing (Used to render full application )
+        ->Routes -Used for multiple component to route
+        ->Route - Used for single component to route            
